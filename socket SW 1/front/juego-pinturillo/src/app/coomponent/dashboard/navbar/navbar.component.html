@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar fixed-top">
+    <div class="container-fluid">
+      <!-- <a class="navbar-brand" [routerLink]="['/dashboard/profile']">
+          <img  src="{{usuario.avatar}}" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      </a> -->
+      <!-- <a class="navbar-brand" [routerLink]="['/dashboard/profile']">{{usuario.nombre}}</a>
+      <a class="navbar-brand" [routerLink]="['/dashboard/profile']" *ngIf="usuario.cliente"> [Cliente]</a>
+      <a class="navbar-brand" [routerLink]="['/dashboard/profile']" *ngIf="usuario.adm"> [Administrador]</a>
+      <a class="navbar-brand" [routerLink]="['/dashboard/profile']" *ngIf="usuario.organizador"> [Organizador]</a>
+      <a class="navbar-brand" [routerLink]="['/dashboard/profile']" *ngIf="usuario?.fotografo"> [Fotografo]</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard']" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/dashboard/myphotos']" >Mis Salas</a>
+          </li>
+        </ul>
+        <!-- <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;" *ngIf="usuario?.fotografo"> -->
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li>
+                <h1>DIAGRAMADOR C4</h1>
+            </li>
+        </ul>
+
+        <button class="btn btn-outline-danger" (click)="desconectarse()" ><i class="fa-solid fa-power-off"></i> Salir</button>
+      </div>
+    </div>
+  </nav>

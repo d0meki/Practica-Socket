@@ -1,0 +1,12 @@
+<div class="chatContainer">
+    <p [ngClass]="{'local': message.messageType === 1, 'remoto':message.messageType === 2}"  class="local" *ngFor="let message of chat.chats" >{{ message.text }}</p>
+    <!-- <p class="remoto" >Mensaje Remoto</p> -->
+</div>
+
+
+<div class="inputContainer">
+    <form (submit)="sendMessage()">
+        <input [(ngModel)]="text" [ngModelOptions]="{standalone:true}"  type="text">
+    </form>
+    
+</div>
